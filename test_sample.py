@@ -15,7 +15,7 @@ def test_lambda_todo_app():
     chrome_driver.find_element_by_name("li1").click()
     chrome_driver.find_element_by_name("li2").click()
 
-    title = "Sample page - lambdatest.com"
+    title = "Modern To-Do App | LambdaTest"
     assert title == chrome_driver.title
 
     sample_text = "Happy Testing at LambdaTest"

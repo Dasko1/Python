@@ -1,23 +1,22 @@
-# Write mode: Creates a new file or truncates an existing file
+#write_to_file.py: write a random number to a file.  This script replaces the
+#number; to append a new number at the bottom, see the append_to_file.py script.
 
-with open("file.txt", "w") as f:
-    f.write("Created using write mode.")
+#Generate a random number
+import random
 
-f = open("file.txt", "r")
-print(f.read())
+x = random.randint(1,100)
 
-# Append mode: Creates a new file or appends to an existing file
+#Print it to screen or to the Test.txt file, or both if you want.
+print x
 
-with open("file.txt", "a") as f:
-    f.write("Content appended to the file.")
+f = open('Test.txt', 'w')
+#Convert the integer to a string.
+value = (x)
+s = str(value)
+f.write(s)
+f.close()
 
-f = open("file.txt", "r")
-print(f.read())
 
-# Exclusive creation mode: Creates a new file, raises error if file exists
 
-try:
-    with open("file.txt", "x") as f:
-        f.write("Created using exclusive mode.")
-except FileExistsError:
-    print("Already exists.")
+
+
