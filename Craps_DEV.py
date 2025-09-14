@@ -10,31 +10,29 @@ y = random.randint(1,6)
 
 z = x + y
 
-print "\nYou rolled: ",x,"+",y,"is:",z
+print("\nYour first roll is: " + str(x) + "+" + str(y) + " is: " + str(z))
 
 while roll <= 1:
   
     if z == 7:
-        print "\n7 on the first roll! YOU WIN!\n"
+        print("\n7 on the first roll! YOU WIN!\n")
         break
     elif z == 11:
-        print "\n11 on the first roll! YOU WIN!\n"
+        print("\n11 on the first roll! YOU WIN!\n")
         break
     elif z == 2:
-        print "\n2 on the first roll! YOU LOSE.\n"
+        print("\n2 on the first roll! YOU LOSE.\n")
         break
     elif z == 3:
-        print "\n3 on the first roll! YOU LOSE.\n"
+        print("\n3 on the first roll! YOU LOSE.\n")
         break
     elif z == 12:
-        print "\n12 on the first roll! YOU LOSE.\n"
+        print("\n12 on the first roll! YOU LOSE.\n")
         break 
     else:  
         roll = roll + 1
-        #break
 
-
-
+# Subsequent rolls
 while c != 7 or c != z:
 
     if roll <= 1:
@@ -45,24 +43,15 @@ while c != 7 or c != z:
 
     c = a + b
 
-    print "\nThe reroll is: ",a,"+",b,"=",c
-    
-    
+    print("\nThe reroll is: "  + str(a) + "+" + str(b) + "=" + str(c))
 
     if c == 7:
-        print "\n7 on the second or more roll! YOU LOSE!\n"
+        print("\n7 on the second or more roll! YOU LOSE!\n")
         break
-        roll = roll + 1
+
     elif c == z:
-        print "\nThe rolls match: YOU WIN!!"
+        print("\nThe rolls match: YOU WIN!!")
         break
-        roll = roll + 1
+
     else:
-        print "\nROLL AGAIN!"
-        #break
-
-    
-
-    
-
-    
+        print("\nROLL AGAIN!")
